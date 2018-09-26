@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=java.lang.Object\ next()
+comment0.text=\r\n\ moves\ the\ iterator\ past\ the\ next\ element\r\n\ \r\n\ @return\ \ \ \ description\ of\ the\ return\ value\r\n
+comment1.params=
+comment1.target=boolean\ hasNext()
+comment1.text=\r\n\ tests\ if\ there\ is\ an\ element\ after\ the\ iterator\ position\r\n\ @return\ true\ if\ there\ is\ an\ element\ after\ the\ iterator\ position\r\n
+numComments=2
