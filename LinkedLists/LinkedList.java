@@ -1,5 +1,6 @@
 
 import java.util.NoSuchElementException;
+//import java.util.IllegalStateException;
 /**
  * Write a description of class LinkedList here.
  * 
@@ -87,7 +88,7 @@ public class LinkedList
         public LinkedListIterator()
         {
             position = null; //we don't know anything yet so
-            previous = null;
+            previous = null; //just for deletin
             isAfterNext = false; //we haven't called next yet
         }
         
@@ -105,7 +106,7 @@ public class LinkedList
             {
                 position = position.next;
             }
-            
+            //LinkedList doesn't have easy random access, it's the way to go for inserting elements
             return position.data;
         }
         
@@ -125,6 +126,52 @@ public class LinkedList
                 return position.next != null; 
                 //it's trying to see if we're at the end of our list
             }
+        }
+        
+         /**
+           * Adds an element before the iterator position and moves the iterator past the inserted element
+           * @param element, the element to add
+           */
+        public void add(Object element)
+        {
+            if(position == null)
+            {
+                addFirst(element);
+                position = first; //we're add first
+            }
+            else
+            {
+                //have to make Object a node
+                Node newNode = new Node();
+                newNode.data = element; //Node points at element now
+                newNode.next = position.next; //got to point to the guy you just added
+                //position points to newNode because that's what you know
+                position.next = newNode;
+                position = newNode; 
+                //just for removal, I got to keep track of old guy with position, while next always move forward
+            }
+            
+            isAfterNext = false;
+        }
+    
+        /**
+          * Removes the last traversed element. This method may only be called after a call to next()
+          */
+        public void remove()
+        {
+            if(!isAfterNext){throw new IllegalStateException();}
+            
+            if(position == first)
+            {
+                removeFirst();
+            }
+            else
+            {
+                previous.next = position.next;
+            }
+            position = previous; //position is equal to previous
+            isAfterNext = false;
+            
         }
     }
 }
