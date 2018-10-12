@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=LinkedListQueue()
+comment0.text=\r\n\ \ \ \ \ \ Constructs\ an\ empty\ queue.\r\n
+comment1.params=
+comment1.target=void\ firstToLast()
+comment1.text=\r\n\ \ \ \ \ \ Moves\ the\ head\ of\ the\ queue\ to\ the\ tail.\r\n
+comment2.params=
+comment2.target=boolean\ empty()
+comment2.text=\r\n\ \ \ \ \ \ Checks\ whether\ this\ queue\ is\ empty.\r\n\ \ \ \ \ \ @return\ true\ if\ this\ queue\ is\ empty\r\n
+comment3.params=newElement
+comment3.target=void\ add(java.lang.Object)
+comment3.text=\r\n\ \ \ \ \ \ Adds\ an\ element\ to\ the\ tail\ of\ this\ queue.\r\n\ \ \ \ \ \ @param\ newElement\ the\ element\ to\ add\r\n
+comment4.params=
+comment4.target=java.lang.Object\ remove()
+comment4.text=\r\n\ \ \ \ \ \ Removes\ an\ element\ from\ the\ head\ of\ this\ queue.\r\n\ \ \ \ \ \ @return\ the\ removed\ element\r\n
+numComments=5

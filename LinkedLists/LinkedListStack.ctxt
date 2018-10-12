@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=LinkedListStack()
+comment0.text=\r\n\ \ \ \ \ \ Constructs\ an\ empty\ stack.\r\n
+comment1.params=element
+comment1.target=void\ push(java.lang.Object)
+comment1.text=\r\n\ \ \ \ \ \ Adds\ an\ element\ to\ the\ top\ of\ the\ stack.\r\n\ \ \ \ \ \ @param\ element\ the\ element\ to\ add\r\n
+comment2.params=
+comment2.target=java.lang.Object\ pop()
+comment2.text=\r\n\ \ \ \ \ \ Removes\ the\ element\ from\ the\ top\ of\ the\ stack.\r\n\ \ \ \ \ \ @return\ the\ removed\ element\r\n
+comment3.params=
+comment3.target=boolean\ isEmpty()
+comment3.text=\r\n\ \ \ \ \ Checks\ whether\ this\ stack\ is\ empty.\r\n\ \ \ \ \ @return\ true\ if\ the\ stack\ is\ empty\r\n
+numComments=4

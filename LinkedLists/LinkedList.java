@@ -45,6 +45,67 @@ public class LinkedList
         first = newNode; //first is a Node
     }
     
+     public void faultyAddFirst(Object element) 
+    {
+        Node newNode = new Node();
+        first = newNode; 
+        newNode.data = element; 
+        newNode.next = first; 
+    }
+    
+       /**
+     * Reverses the List linkes
+     * e16.1
+     */
+    public void reverse()
+    {
+       if (first== null) return; 
+       
+       Node previous = first; 
+       Node current = first.next; 
+       first.next = null; 
+       while (current != null) 
+       {
+           Node next = current.next; 
+           current.next = previous; 
+           previous = current; 
+           current = next; 
+        }
+       first = previous; 
+    }
+    
+    /**
+     * 
+     */
+    public int size() 
+    {
+        int count= 0; 
+        //if (first== null) return count; 
+        
+        Node temp = first; 
+        //count++; 
+        
+        while(temp!= null)
+        {
+            count++;
+            temp=temp.next;
+        }
+        
+        return count; 
+    }
+ 
+    
+    public String toString() 
+    {
+        ListIterator iter = this.listIterator(); 
+        String returnString = ""; 
+        while (iter.hasNext()) 
+        {
+            returnString += iter.next() + " ";
+        }
+        return returnString; 
+    }
+    
     /**
      * Returns the first element in the LinkedList
      * @return the first element in the LinkedList
@@ -126,6 +187,16 @@ public class LinkedList
                 return position.next != null; 
                 //it's trying to see if we're at the end of our list
             }
+        }
+        
+        /**
+         * faulty version of hasNext()
+         * @return supposed to return true if there is an element after the iterator position
+         */
+        public boolean faulty_hasNext()
+        {
+            //E16.3
+            return position != null;
         }
         
          /**

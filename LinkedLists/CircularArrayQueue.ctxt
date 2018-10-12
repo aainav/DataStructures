@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.params=
+comment0.target=CircularArrayQueue()
+comment0.text=\r\n\ \ \ \ \ \ Constructs\ an\ empty\ queue.\r\n
+comment1.params=
+comment1.target=boolean\ empty()
+comment1.text=\r\n\ \ \ \ \ \ Checks\ whether\ this\ queue\ is\ empty.\r\n\ \ \ \ \ \ @return\ true\ if\ this\ queue\ is\ empty\r\n
+comment2.params=newElement
+comment2.target=void\ add(java.lang.Object)
+comment2.text=\r\n\ \ \ \ \ \ Adds\ an\ element\ to\ the\ tail\ of\ this\ queue.\r\n\ \ \ \ \ \ @param\ newElement\ the\ element\ to\ add\r\n
+comment3.params=
+comment3.target=java.lang.Object\ remove()
+comment3.text=\r\n\ \ \ \ \ \ Removes\ an\ element\ from\ the\ head\ of\ this\ queue.\r\n\ \ \ \ \ \ @return\ the\ removed\ element\r\n
+comment4.params=
+comment4.target=void\ growIfNecessary()
+comment4.text=\r\n\ \ \ \ \ \ Grows\ the\ element\ array\ if\ the\ current\ size\ equals\ the\ capacity.\r\n
+comment5.params=
+comment5.target=void\ firstToLast()
+numComments=6
