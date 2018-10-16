@@ -21,16 +21,21 @@ public class LinkedListQueue
    /**
       Moves the head of the queue to the tail.
    */
-   public void firstToLast()
+   public void lastToFirst()
    {
-       tail.next = head;
-       tail = head;
-       head = head.next;
+       Node newNode = tail;
+       newNode.next = head;
+       
+       head = newNode;
+       
+       Node temp = head;
+       while(temp.next != tail)
+       {
+           temp = temp.next;
+       }
+       
+       tail = temp;
        tail.next = null;
-      
-
-
-
    }
 
    /**

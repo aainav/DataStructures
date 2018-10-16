@@ -72,18 +72,29 @@ public class CircularArrayQueue
       }
    }
    
-   public void firstToLast()
+   public void lastToFirst()
    {
-       //growIfNecessary();
-       int nextTail = tail + 1;
-       int nextHead = head + 1;
+       if (currentSize <= 1);
+       else
+       {
+           tail --;
+           head --;
+           if (tail < 0)
+           {
+               tail = elements.length + tail;
+           }
+           if (head < 0)
+           {
+               head = elements.length + head;
+           }
+           Object temp = elements[tail];
+           elements[tail] = null;
+           elements[head] = temp;
+        }
        
-       System.out.println(tail);
-       System.out.println(nextTail);
-       System.out.println(head);
-       System.out.println(nextHead);
-       
-       //head = nextTail;
-       
+   }
+   
+   public void firstToList()
+   {
    }
 }
