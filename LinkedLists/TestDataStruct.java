@@ -19,9 +19,22 @@ public class TestDataStruct
         lister.addFirst(new String ("wahhh"));
         lister.addFirst(new String("Two")); //linked list is now [two] [new]
         
+        System.out.println("This is for 16.1");
+        System.out.println(lister.get(1));
+        System.out.println("Expected for Get: wahhh");
+        lister.set(1, "hhhaw");
+        System.out.println(lister.get(1));
+        System.out.println("Expected for Set: hhhaw");
+        
+        System.out.println("This is for 16.4");
+        boolean check = lister.contains("wahhh");
+        System.out.println("wahhh --> " + check);
+        check = lister.contains("hhhaw");
+        System.out.println("hhhaw --> " + check);
         
         
         
+        /*
         //String word2= lister.getFirst(); //this returns as object- but word 2 is not an object 
         
         //OLD school- had to cast the object first
@@ -49,7 +62,7 @@ public class TestDataStruct
         //else
             //System.out.println("It doesn't work- FAIL\n");
         
-        
+        */
               
         
         

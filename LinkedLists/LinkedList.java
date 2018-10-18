@@ -135,6 +135,63 @@ public class LinkedList
         }
     }
     
+    /**
+     * This is part1 of 16.1
+     * @param the index of the Object we need to access
+     * @return the Object that is at current Node
+     */
+    public Object get(int n)
+    {
+        Node help = new Node();
+        help = getNode(n);
+        return help.data; //returns data of Node
+    }
+    
+    /**
+     * helper method for get(int n) that starts at first and follows n links
+     * @param the index of the Object we need to access
+     * @return the Node of the Object we're trying to access
+     */
+    private Node getNode(int n)
+    {
+        Node temp = new Node(); //loops through the LL the number of times of n
+        temp = first;
+        for (int i = 0; i < n; i++)
+        {
+            temp = first.next;
+        }
+        return temp;
+    }
+    
+    /**
+     * This is part2 of 16.1
+     * @param the position of Object and it's modified value
+     */
+    public void set(int n, Object newElement)
+    {
+        Node help = new Node();
+        help = getNode(n); //Node at n
+        help.data = newElement;
+    }
+    
+    /**
+     * This is for 16.4
+     * @param the Object we are checking is in the LL
+     * @return if the Object is in the lL
+     */
+    public boolean contains(Object obj)
+    {
+        int size = this.size();
+        for (int i = 0; i < size; i++)
+        {
+            if (this.get(i).equals(obj))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    
     public ListIterator listIterator()
     {
         return new LinkedListIterator(); //have to return the LinkedList
